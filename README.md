@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 授業進捗管理システム
 
-## Getting Started
+小中学校の先生向けの授業進捗管理Webアプリケーションです。
 
-First, run the development server:
+## 機能
+
+### 📚 年間計画管理
+- 年間計画の作成・編集
+- PDFファイルのアップロード対応
+- Googleスプレッドシートからのインポート
+- 単元ごとの実施済みチェック
+- 進捗率の可視化
+
+### 📅 時間割入力
+- 授業実施内容の記録
+- **次の未実施単元の自動提案機能**
+- 日付・時限・教科の管理
+- メモ・備考の記録
+
+### 📊 進捗確認
+- 教科別進捗状況のグラフ表示
+- 全体進捗率の円グラフ
+- 月別進捗（予定 vs 実績）の比較
+- 教科別詳細テーブル
+
+## 技術スタック
+
+- **フロントエンド**: Next.js 16 (App Router)
+- **言語**: TypeScript
+- **スタイリング**: Tailwind CSS
+- **グラフ**: Recharts
+- **データベース**: Supabase (予定)
+- **認証**: Supabase Auth (予定)
+
+## セットアップ
+
+### 前提条件
+
+- Node.js 18以上
+- npm または yarn
+
+### インストール
 
 ```bash
+# リポジトリをクローン
+git clone https://github.com/Tetsu-Tlab/jisuukannri.git
+cd jisuukannri
+
+# 依存パッケージをインストール
+npm install
+
+# 開発サーバーを起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 対応デバイス
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- ✅ デスクトップPC（Windows/Mac/Linux）
+- ✅ タブレット（iPad等）
+- ✅ **Chromebook**
+- ✅ スマートフォン
 
-## Learn More
+レスポンシブデザインにより、すべてのデバイスで快適に使用できます。
 
-To learn more about Next.js, take a look at the following resources:
+## 使い方
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **年間計画管理**: 教科書のPDFをアップロードするか、Googleスプレッドシートから年間計画をインポート
+2. **時間割入力**: 実施した授業内容を記録（未実施の次の単元が自動提案されます）
+3. **進捗確認**: クラスごと・教科ごとの進捗状況をグラフで確認
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 今後の予定
 
-## Deploy on Vercel
+- [ ] Supabaseとの連携（データ永続化）
+- [ ] Google Sheets API統合
+- [ ] 教師ログイン機能
+- [ ] PDFアップロード機能
+- [ ] 複数クラス・複数教科の管理
+- [ ] データのエクスポート機能
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ライセンス
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
+
+## 開発者
+
+Tetsu-Tlab
